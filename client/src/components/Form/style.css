@@ -1,0 +1,8 @@
+.sub-button {
+    text-align: center;
+    cursor: pointer;
+}
+
+.sub-button:hover {
+    background-color: darkgreen;
+}
