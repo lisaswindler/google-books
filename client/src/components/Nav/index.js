@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./style.css";
 
 function Nav() {
@@ -7,17 +7,6 @@ function Nav() {
             <a className="navbar-brand" href="/">
                 Google Bookshelf
       </a>
-            <form>
-                <label>
-                    <div className="search-bar">
-                    <input className="search-input"
-                        type="search"
-                        placeholder="Book search"
-                    />
-                    <button className="search-button" type="submit">Search</button>
-                    </div>
-                </label>
-            </form>
         </nav>
     );
 }

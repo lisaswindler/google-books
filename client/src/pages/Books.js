@@ -56,9 +56,9 @@ class Books extends Component {
   render() {
     return (
       <Container fluid>
-        <Jumbotron>
+        {/* <Jumbotron>
             Escape into a Good Book
-        </Jumbotron>
+        </Jumbotron> */}
         <Row>
           <Col size="md-6">
             {/* <Jumbotron>

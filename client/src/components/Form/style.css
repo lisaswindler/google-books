@@ -1,8 +1,14 @@
 .sub-button {
     text-align: center;
     cursor: pointer;
+    background-color: rgb(207, 207, 207);
 }
 
 .sub-button:hover {
-    background-color: darkgreen;
+    background-color: rgb(117, 117, 117);
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 1;
 }
