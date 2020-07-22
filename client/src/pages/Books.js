@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
+import Search from "../components/Search";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -59,6 +59,7 @@ class Books extends Component {
         {/* <Jumbotron>
             Escape into a Good Book
         </Jumbotron> */}
+        {/* <Search/> */}
         <Row>
           <Col size="md-6">
             {/* <Jumbotron>
