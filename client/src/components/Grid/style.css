@@ -1,7 +1,13 @@
 .main-section {
-    padding: 20px;
+  padding-top: 35px;
+  margin: auto;
 }
 
 body {
     background-color: rgb(22, 19, 19);
+    color: white;
+}
+
+.col-book-list {
+    margin: auto;
 }

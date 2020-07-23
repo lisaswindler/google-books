@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Search from "../components/Search";
+import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -22,7 +23,7 @@ class Books extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, title: "", author: "", synopsis: "", image: "", link: ""})
       )
       .catch(err => console.log(err));
   };
@@ -33,38 +34,35 @@ class Books extends Component {
       .catch(err => console.log(err));
   };
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+//   handleInputChange = event => {
+//     const { name, value } = event.target;
+//     this.setState({
+//       [name]: value
+//     });
+//   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
-      })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
+//   handleFormSubmit = event => {
+//     event.preventDefault();
+//     if (this.state.title && this.state.author) {
+//       API.saveBook({
+//         title: this.state.title,
+//         author: this.state.author,
+//         synopsis: this.state.synopsis
+//       })
+//         .then(res => this.loadBooks())
+//         .catch(err => console.log(err));
+//     }
+//   };
 
   render() {
     return (
       <Container fluid>
-        {/* <Jumbotron>
-            Escape into a Good Book
-        </Jumbotron> */}
         {/* <Search/> */}
+        <Jumbotron>
+            Reading List
+        </Jumbotron>
         <Row>
-          <Col size="md-6">
-            {/* <Jumbotron>
-              <h1>What Books Should I Read?</h1>
-            </Jumbotron> */}
+          {/* <Col size="md-6">
             <form>
               <Input
                 value={this.state.title}
@@ -91,11 +89,8 @@ class Books extends Component {
                 Submit Book
               </FormBtn>
             </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            {/* <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron> */}
+          </Col> */}
+          <Col size="md-6 sm-12 book-list">
             {this.state.books.length ? (
               <List>
                 {this.state.books.map(book => (

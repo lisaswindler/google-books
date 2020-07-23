@@ -1,13 +1,12 @@
 .jumbotron {
-    text-align: center;
+    text-align: left;
     margin-left: 0;
     border-radius: 0;
-    background-image: url("https://cdn.pixabay.com/photo/2015/07/09/22/45/tree-838667_1280.jpg");
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/01/15/09/53/texture-1981129_1280.jpg");
+    padding: .5rem 1rem;
     background-position: center;
     background-size: cover;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 0;
 }
